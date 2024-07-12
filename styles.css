@@ -1,8 +1,10 @@
+/* Reset básico e configuração global */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
+
 body {
     font-family: Arial, sans-serif;
     color: #333;
@@ -10,101 +12,140 @@ body {
     margin: 0;
     padding: 0;
 }
+
 .container {
     width: 80%;
     margin: auto;
     overflow: hidden;
 }
+
+/* Estilos para o cabeçalho */
 header {
     background: #50a8a0;
     color: white;
-    padding-top: 30px;
-    min-height: 70px;
-    border-bottom: #e8491d 3px solid;
-}
-header h1 {
-    margin: 0;
-    padding: 0;
+    padding: 20px 0;
     text-align: center;
-    font-size: 2.5em;
+    border-bottom: 3px solid #e8491d;
 }
+
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+/* Estilos para a barra de navegação */
 nav {
     background: #444;
     color: white;
     text-align: center;
     padding: 10px 0;
 }
+
 nav ul {
+    list-style-type: none;
     padding: 0;
-    margin: 0;
 }
+
 nav ul li {
     display: inline;
-    margin: 0 5px;
+    margin: 0 10px;
 }
+
 nav ul li a {
     color: white;
     text-decoration: none;
     font-size: 1.2em;
+    padding: 10px 15px;
+    border-radius: 5px;
 }
+
+nav ul li a:hover {
+    background-color: #666;
+}
+
+/* Layout principal e barra lateral */
 #main {
-    float: left;
     width: 70%;
+    float: left;
     padding: 20px;
 }
+
 #sidebar {
-    float: right;
     width: 30%;
+    float: right;
     padding: 20px;
     background: #50a8a0;
     color: white;
 }
+
+/* Estilos para as seções */
 .section {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     padding: 20px;
-    border-bottom: 1px solid #ddd;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
 }
 
+.section p {
+    margin-bottom: 15px;
+    color: #666;
+}
+
+.section ul li a {
+    text-decoration: none;
+    color: #007bff; /* Azul padrão do Bootstrap */
+    transition: color 0.3s ease; /* Transição suave na mudança de cor */
+}
+
+.section h1,
+.section h2,
+.section h3 {
+    color: #333;
+}
+
+/* Estilos para o rodapé */
 footer {
-    clear: both;
     background: #444;
     color: white;
     text-align: center;
-    padding: 20px;
-    margin-top: 20px;
+    padding: 20px 0;
+    clear: both;
 }
 
-
-/* Estilos para o formulário */
-/* Estilos para o formulário */
+/* Estilos para formulários */
 form {
     margin: auto;
-    padding: 10px; /* Adicionando espaçamento interno */
+    padding: 20px;
+    max-width: 600px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
 }
 
-label {
-    font-weight: bold;
-    margin-bottom: 5px;
+form label {
     display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
 }
 
-input[type="text"],
-input[type="email"],
-textarea {
-    width: calc(100% - 20px); /* Reduzindo a largura para considerar o padding */
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    width: calc(100% - 20px);
     padding: 10px;
-    margin-bottom: 5px; /* Reduzindo a margem inferior */
+    margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
     box-sizing: border-box;
 }
 
-textarea {
+form textarea {
+    height: 120px;
     resize: vertical;
-    height: 120px; /* Reduzindo a altura do campo de texto */
 }
 
-input[type="submit"] {
+form input[type="submit"] {
     background-color: #50a8a0;
     color: white;
     padding: 10px 20px;
@@ -114,7 +155,6 @@ input[type="submit"] {
     font-size: 1em;
 }
 
-input[type="submit"]:hover {
+form input[type="submit"]:hover {
     background-color: #3c7b73;
 }
-
